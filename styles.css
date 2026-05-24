@@ -424,26 +424,28 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 22px;
   box-shadow: 0 14px 34px rgba(92, 58, 78, 0.08);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   overflow: hidden;
   padding: 24px;
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .poster-card {
-  grid-column: span 2;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-column: auto;
 }
 
 .extra-card img {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 10;
   border: 1px solid var(--line);
   border-radius: 16px;
   max-width: 100%;
   object-fit: cover;
   object-position: center top;
   width: 100%;
+  max-height: 220px;
 }
 
 .extra-card span {
@@ -474,6 +476,11 @@ h2 {
 
 .extra-card p {
   color: var(--muted);
+}
+
+.extra-card .text-link {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .contact {
@@ -540,7 +547,7 @@ h2 {
   }
 
   .poster-card img {
-    max-height: 360px;
+    max-height: 260px;
   }
 
   .large-card {
@@ -571,6 +578,11 @@ h2 {
   .contact {
     border-radius: 20px;
     padding: 24px;
+  }
+
+  .extra-grid {
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
